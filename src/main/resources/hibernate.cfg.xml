@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/musicians_test</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">1993</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
+
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <mapping class="ru.levelup.musicians.model.Country" />
+        <mapping class="ru.levelup.musicians.model.Musician" />
+        <mapping class="ru.levelup.musicians.model.Band" />
+        <mapping class="ru.levelup.musicians.model.Song" />
+        <mapping class="ru.levelup.musicians.model.Album" />
+        <mapping class="ru.levelup.musicians.model.Genre" />
+        <mapping class="ru.levelup.musicians.model.MusiciansBands" />
+
+    </session-factory>
+</hibernate-configuration>
